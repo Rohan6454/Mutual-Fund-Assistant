@@ -1,0 +1,41 @@
+# Core
+fastapi>=0.110.0
+uvicorn>=0.29.0
+pydantic>=2.6.0
+python-dotenv>=1.0.0
+
+# LLM & Embeddings
+google-generativeai>=0.5.0
+google-genai>=1.0.0
+sentence-transformers>=2.6.0
+
+# Vector Database
+qdrant-client>=1.8.0
+
+# Document Processing
+beautifulsoup4>=4.12.0
+PyMuPDF>=1.24.0
+pdfplumber>=0.10.0
+langchain-text-splitters>=0.0.1
+
+# Web Scraping
+requests>=2.31.0
+playwright>=1.42.0
+
+# Rate Limiting
+slowapi>=0.1.9
+
+# Scheduler
+APScheduler>=3.10.0
+tzdata>=2024.1
+
+# Utilities
+numpy>=1.26.0
+
+# Frontend
+streamlit>=1.32.0
+streamlit-option-menu>=0.3.6
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

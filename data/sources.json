@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "description": "Multi-AMC Mutual Fund FAQ Assistant corpus (Optimized for Fast Local Builds)",
+    "amcs": [
+      "ICICI Prudential",
+      "HDFC Mutual Fund"
+    ],
+    "platforms": [
+      "Groww"
+    ],
+    "created_at": "2026-04-17",
+    "total_sources": 4
+  },
+  "sources": [
+    {
+      "id": "src_001",
+      "url": "https://groww.in/help/mutual-funds",
+      "source_type": "help_guide",
+      "document_format": "html",
+      "batch": "groww_help",
+      "scheme_name": "general",
+      "category": "platform_help",
+      "notes": "Groww mutual funds help section",
+      "last_scraped": "2026-04-16T23:04:29.171360+00:00",
+      "scrape_status": "ok"
+    },
+    {
+      "id": "src_002",
+      "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-large-cap-fund/regular",
+      "source_type": "scheme_page",
+      "document_format": "html",
+      "batch": "scheme_pages",
+      "scheme_name": "HDFC Large Cap Fund",
+      "amc": "HDFC Mutual Fund",
+      "category": "scheme_specific",
+      "notes": "Large cap equity fund scheme page",
+      "last_scraped": "2026-04-16T23:05:34.585739+00:00",
+      "scrape_status": "ok"
+    },
+    {
+      "id": "src_003",
+      "url": "https://www.icicipruamc.com/mutual-fund/icici-prudential-flexicap-fund",
+      "source_type": "scheme_page",
+      "document_format": "html",
+      "batch": "scheme_pages",
+      "scheme_name": "ICICI Prudential Flexicap Fund",
+      "amc": "ICICI Prudential",
+      "category": "scheme_specific",
+      "notes": "Flexi cap equity fund scheme page",
+      "last_scraped": "2026-04-16T23:06:09.004305+00:00",
+      "scrape_status": "ok"
+    },
+    {
+      "id": "src_004",
+      "url": "https://www.sebi.gov.in/sebi_data/faqfiles/sep-2024/1727242783639.pdf",
+      "source_type": "regulatory",
+      "document_format": "html",
+      "batch": "regulatory",
+      "scheme_name": "general",
+      "category": "regulatory",
+      "notes": "SEBI mutual fund FAQs - regulatory information",
+      "last_scraped": "2026-04-16T23:06:14.140191+00:00",
+      "scrape_status": "ok"
+    }
+  ]
+}

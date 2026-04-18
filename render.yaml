@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mutual-fund-api
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: "pip install -r requirements.txt && playwright install chromium"
+    startCommand: "uvicorn phase-5-backend-api.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: SCHEDULER_ENABLED
+        value: "true"
+      - key: PYTHON_VERSION
+        value: "3.10.x"
