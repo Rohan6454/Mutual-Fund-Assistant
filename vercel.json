@@ -1,8 +1,5 @@
 {
   "framework": "nextjs",
-  "buildCommand": "cd phase-6-frontend-ui && npm run build",
-  "outputDirectory": "phase-6-frontend-ui/.next",
-  "installCommand": "cd phase-6-frontend-ui && npm install",
   "rewrites": [
     {
       "source": "/api/:path*",
