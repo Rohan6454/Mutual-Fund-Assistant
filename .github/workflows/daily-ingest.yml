@@ -1,6 +1,5 @@
 # Daily scrape → chunk → embed. Cron is UTC (03:45 ≈ 09:15 IST).
-# Configure repository secrets: GEMINI_API_KEY, and either QDRANT_URL + QDRANT_API_KEY
-# or QDRANT_HOST / QDRANT_PORT (and QDRANT_API_KEY if required).
+# Configure repository secrets: GEMINI_API_KEY, QDRANT_URL, QDRANT_API_KEY.
 
 name: Daily corpus ingest
 
@@ -12,6 +11,8 @@ on:
 jobs:
   ingest:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
