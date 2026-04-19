@@ -3,7 +3,11 @@
 from __future__ import annotations
 
 import sys
+import time
+import logging
 from pathlib import Path
+
+logger = logging.getLogger(__name__)
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PHASE4 = Path(__file__).resolve().parent
@@ -32,14 +36,27 @@ def _build_context_prompt(user_query: str, retrieval: RetrievalResult) -> str:
 
 def _call_gemini(system_prompt: str, user_prompt: str) -> str:
     import google.generativeai as genai
+    from google.api_core import exceptions
 
     genai.configure(api_key=settings.GEMINI_API_KEY)
     model = genai.GenerativeModel(model_name=settings.GEMINI_MODEL, system_instruction=system_prompt)
-    response = model.generate_content(
-        user_prompt
-    )
-    text = (response.text or "").strip()
-    return text
+    
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = model.generate_content(user_prompt)
+            return (response.text or "").strip()
+        except exceptions.ResourceExhausted as e:
+            if attempt == max_retries - 1:
+                logger.error("Gemini quota exceeded after %s retries", max_retries)
+                raise
+            wait_time = (attempt + 1) * 5
+            logger.warning("Gemini rate limit hit; retrying in %ss... (Error: %s)", wait_time, e)
+            time.sleep(wait_time)
+        except Exception as e:
+            logger.error("Gemini generation error: %s", e)
+            raise
+    return ""
 
 
 def _format_final(answer: str, source_url: str, source_date: str | None) -> str:
