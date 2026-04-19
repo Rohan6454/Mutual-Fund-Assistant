@@ -19,7 +19,7 @@ app = FastAPI(title="Mutual Fund FAQ Backend API", version="0.1.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -50,5 +50,7 @@ def rate_limit_handler(request: Request, exc: RateLimitExceeded) -> JSONResponse
 
 @app.exception_handler(Exception)
 def unhandled_exception_handler(request: Request, exc: Exception) -> JSONResponse:
-    logger.exception("Unhandled API error: %s", exc)
-    return JSONResponse(status_code=500, content={"detail": "Internal server error"})
+    import traceback
+    error_details = traceback.format_exc()
+    logger.error("Unhandled API error: %s\n%s", exc, error_details)
+    return JSONResponse(status_code=500, content={"detail": f"Internal server error: {str(exc)}"})
