@@ -47,9 +47,18 @@ def _qdrant_client() -> QdrantClient:
 
 
 def _ensure_collection(client: QdrantClient, name: str, dim: int) -> None:
-    names = {c.name for c in client.get_collections().collections}
-    if name in names:
-        return
+    try:
+        col_info = client.get_collection(name)
+        existing_dim = col_info.config.params.vectors.size
+        
+        if existing_dim != dim:
+            logger.info("Dimension mismatch (Existing: %s, New: %s). Recreating collection %s...", existing_dim, dim, name)
+            client.delete_collection(name)
+        else:
+            return
+    except Exception:
+        # Collection doesn't exist
+        pass
 
     client.create_collection(
         collection_name=name,

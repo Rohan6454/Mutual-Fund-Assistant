@@ -63,9 +63,9 @@ export class ApiService {
     const url = `${this.getBaseUrl().replace(/\/$/, '')}/api/chat`;
     const payload = { message, thread_id: threadId };
     
-    // Default 60s timeout for chat to handle cold starts
+    // Default 90s timeout for chat to handle cold starts
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 60000);
+    const timeoutId = setTimeout(() => controller.abort(), 90000);
     
     try {
       const res = await fetch(url, {

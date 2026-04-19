@@ -31,6 +31,11 @@ app.include_router(chat.router, prefix="/api")
 app.include_router(threads.router, prefix="/api")
 app.include_router(health.router, prefix="/api")
 
+@app.get("/")
+def root():
+    """Root endpoint for Render health checks."""
+    return {"status": "ok", "message": "Mutual Fund FAQ API is running"}
+
 
 @app.on_event("startup")
 async def startup_event():
