@@ -36,8 +36,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           QDRANT_URL: ${{ secrets.QDRANT_URL }}
           QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
-          QDRANT_HOST: ${{ secrets.QDRANT_HOST }}
-          QDRANT_PORT: ${{ secrets.QDRANT_PORT }}
+          EMBEDDING_MODEL: local
         run: python phase-2-document-processing/generate_embeddings.py
 
       - name: Commit updated timestamps
