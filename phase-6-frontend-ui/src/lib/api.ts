@@ -59,27 +59,40 @@ export class ApiService {
     return data.messages || [];
   }
 
-  static async sendMessage(message: string, threadId: string | null): Promise<{thread_id: string, reply: string}> {
+  static async sendMessage(message: string, threadId: string | null): Promise<{thread_id: string, answer: string}> {
     const url = `${this.getBaseUrl().replace(/\/$/, '')}/api/chat`;
     const payload = { message, thread_id: threadId };
     
-    const res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
+    // Default 60s timeout for chat to handle cold starts
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 60000);
     
-    if (!res.ok) {
-      const errorText = await res.text();
-      throw new Error(`Chat API error: ${res.status} - ${errorText}`);
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (!res.ok) {
+        const errorText = await res.text();
+        throw new Error(`Chat API error: ${res.status} - ${errorText}`);
+      }
+      
+      const data = await res.json();
+      return {
+         thread_id: data.thread_id,
+         answer: data.answer || '' 
+      };
+    } catch (e: any) {
+      clearTimeout(timeoutId);
+      if (e.name === 'AbortError') {
+        throw new Error("The service is taking a while to wake up. Please try again in 15-20 seconds.");
+      }
+      throw e;
     }
-    
-    const data = await res.json();
-    // Assuming backend returns thread_id and we will fetch messages subsequently, 
-    // or it returns the full new state. FastApi returns the thread_id.
-    return {
-       thread_id: data.thread_id,
-       reply: data.reply || '' 
-    };
   }
 }

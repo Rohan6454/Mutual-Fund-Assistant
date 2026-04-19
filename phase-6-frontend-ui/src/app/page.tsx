@@ -104,9 +104,13 @@ export default function Home() {
     } catch (e: unknown) {
       console.error(e);
       const errorMessage = e instanceof Error ? e.message : "Failed to send message";
-      alert(errorMessage);
-      // Remove the optimistically added message if failed
-      setMessages((prev) => prev.filter((m) => m !== userMsg));
+      
+      // Add a system error message to the chat instead of an alert
+      const errorMsg: Message = { 
+        role: "assistant", 
+        text: `⚠️ ERROR: ${errorMessage}` 
+      };
+      setMessages((prev) => [...prev, errorMsg]);
     } finally {
       setIsLoading(false);
     }
