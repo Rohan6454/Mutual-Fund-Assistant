@@ -34,14 +34,8 @@ app.include_router(health.router, prefix="/api")
 
 @app.on_event("startup")
 async def startup_event():
-    """Preload models on startup to prevent timeout issues."""
-    try:
-        from services.rag_service import _preload_models
-        _preload_models()
-        logger.info("Backend startup completed - models preloaded")
-    except Exception as e:
-        logger.error(f"Failed to preload models during startup: {e}")
-        # Continue startup even if preloading fails
+    """Log startup. Models load lazily on first request to avoid Render port-scan timeout."""
+    logger.info("Backend startup completed - models will load on first request")
 
 
 @app.exception_handler(RateLimitExceeded)
