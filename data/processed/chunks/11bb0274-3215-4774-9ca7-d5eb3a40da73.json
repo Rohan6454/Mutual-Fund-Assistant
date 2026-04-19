@@ -1,0 +1,16 @@
+{
+  "chunk_id": "11bb0274-3215-4774-9ca7-d5eb3a40da73",
+  "text": "T = date of transaction in mutual fund units in India \n5) What is cut off timing and its role in determining the applicable NAV for transactions \nin Mutual Fund scheme (s)? \nThe purchase and redemption are done at the applicable NAV. In order to ensure fairness to \ninvestors, SEBI has prescribed cut-off timings which are uniformly applicable for all mutual funds. \nThese are provided below: \n \nType of Scheme \nTransaction type \nCut \noff \ntime \nApplicable NAV \nLiquid \nfund \nand \nOvernight fund",
+  "metadata": {
+    "source_url": "https://www.sebi.gov.in/sebi_data/faqfiles/sep-2024/1727242783639.pdf",
+    "source_id": "src_004",
+    "scheme_name": "general",
+    "doc_type": "regulatory",
+    "section": null,
+    "page_number": null,
+    "last_updated": "2026-04-16",
+    "chunk_index": 15,
+    "total_chunks": 108,
+    "raw_file": "data/raw/pdf/regulatory_src_004_sebi-data-faqfiles-sep-2024-1727242783639-pdf_20260416.pdf"
+  }
+}

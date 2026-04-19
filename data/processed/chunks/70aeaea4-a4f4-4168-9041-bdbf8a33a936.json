@@ -1,0 +1,16 @@
+{
+  "chunk_id": "70aeaea4-a4f4-4168-9041-bdbf8a33a936",
+  "text": "information document (SID). Exit load is calculated as a percentage of NAV. \nSuppose a mutual fund scheme charged exit load of 1% for redemption within 90 days from the \ndate of purchase. Assume that you redeem 1000 units of a scheme before 90 days of purchase \nand NAV per unit is INR 50. The exit load will be = 1% X 1000 (numbers of units) X INR 50 (NAV \nper unit) = INR 500. This amount will be deducted from redemption proceeds and you will get \nredemption proceeds of INR 49500.",
+  "metadata": {
+    "source_url": "https://www.sebi.gov.in/sebi_data/faqfiles/sep-2024/1727242783639.pdf",
+    "source_id": "src_004",
+    "scheme_name": "general",
+    "doc_type": "regulatory",
+    "section": null,
+    "page_number": null,
+    "last_updated": "2026-04-16",
+    "chunk_index": 46,
+    "total_chunks": 108,
+    "raw_file": "data/raw/pdf/regulatory_src_004_sebi-data-faqfiles-sep-2024-1727242783639-pdf_20260416.pdf"
+  }
+}

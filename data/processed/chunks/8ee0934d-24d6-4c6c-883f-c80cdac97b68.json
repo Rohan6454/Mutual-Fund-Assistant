@@ -1,0 +1,16 @@
+{
+  "chunk_id": "8ee0934d-24d6-4c6c-883f-c80cdac97b68",
+  "text": "Net asset = Total Asset – Total Liabilities \n = INR 200 lakh – INR 10 lakh \n = INR 190 lakh \nNAV = Net asset/total outstanding units \n = INR 19 (i.e.190 lakh/10 lakh). \n \nNAV of a fund changes every day as a result of changes in the market price of the securities that \nform a part of the portfolio. Therefore, NAV is determined on a daily basis and required to be \ndisclosed by the mutual funds on a daily basis. NAV of schemes has to be updated in accordance \nwith time lines mentioned under:",
+  "metadata": {
+    "source_url": "https://www.sebi.gov.in/sebi_data/faqfiles/sep-2024/1727242783639.pdf",
+    "source_id": "src_004",
+    "scheme_name": "general",
+    "doc_type": "regulatory",
+    "section": null,
+    "page_number": null,
+    "last_updated": "2026-04-16",
+    "chunk_index": 12,
+    "total_chunks": 108,
+    "raw_file": "data/raw/pdf/regulatory_src_004_sebi-data-faqfiles-sep-2024-1727242783639-pdf_20260416.pdf"
+  }
+}

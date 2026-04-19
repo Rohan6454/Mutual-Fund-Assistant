@@ -32,8 +32,6 @@ wheels/
 htmlcov/
 
 # Local Data & Logs
-data/raw/
-data/processed/
 logs/
 *.log
 qdrant_storage/

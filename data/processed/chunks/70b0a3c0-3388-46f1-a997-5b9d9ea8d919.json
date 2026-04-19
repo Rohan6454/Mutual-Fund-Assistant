@@ -1,0 +1,16 @@
+{
+  "chunk_id": "70b0a3c0-3388-46f1-a997-5b9d9ea8d919",
+  "text": "fund is denoted by Net Asset Value (NAV). NAV indicates the price at which investors buy or \nredeem mutual fund units. \nNAV of a scheme is determined by dividing the net assets (Total Asset – Total Liabilities) of the \nscheme by the total number of outstanding units on any particular date. For example, if the total \nasset of a mutual fund scheme is INR 200 lakh and total liabilities is INR 10 lakh and 10 lakh units \nare outstanding, then the NAV per unit of the fund is calculated as under:",
+  "metadata": {
+    "source_url": "https://www.sebi.gov.in/sebi_data/faqfiles/sep-2024/1727242783639.pdf",
+    "source_id": "src_004",
+    "scheme_name": "general",
+    "doc_type": "regulatory",
+    "section": null,
+    "page_number": null,
+    "last_updated": "2026-04-16",
+    "chunk_index": 11,
+    "total_chunks": 108,
+    "raw_file": "data/raw/pdf/regulatory_src_004_sebi-data-faqfiles-sep-2024-1727242783639-pdf_20260416.pdf"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "d6279eb0-751b-4c3f-a8a9-bb8b86ec220b",
+  "text": "Examples: Assume that in a particular week, Monday, Wednesday and Thursday are business days \nand Tuesday is a non-business day. \n \nAn investor submits an application on Monday to buy units of an equity mutual fund scheme for \nINR 3,00,000. If an application is made on Monday and the fund gets realized on Wednesday by \n2 pm, it will be Wednesday's NAV. If funds are realized or available for utilisation on Wednesday \nby 5 pm, then it will be Thursday's NAV. \n",
+  "metadata": {
+    "source_url": "https://www.sebi.gov.in/sebi_data/faqfiles/sep-2024/1727242783639.pdf",
+    "source_id": "src_004",
+    "scheme_name": "general",
+    "doc_type": "regulatory",
+    "section": null,
+    "page_number": null,
+    "last_updated": "2026-04-16",
+    "chunk_index": 21,
+    "total_chunks": 108,
+    "raw_file": "data/raw/pdf/regulatory_src_004_sebi-data-faqfiles-sep-2024-1727242783639-pdf_20260416.pdf"
+  }
+}
