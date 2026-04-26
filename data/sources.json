@@ -21,7 +21,7 @@
       "scheme_name": "general",
       "category": "platform_help",
       "notes": "Groww mutual funds help section",
-      "last_scraped": "2026-04-25T05:33:30.668188+00:00",
+      "last_scraped": "2026-04-26T05:59:39.334669+00:00",
       "scrape_status": "ok"
     },
     {
@@ -34,7 +34,7 @@
       "amc": "HDFC Mutual Fund",
       "category": "scheme_specific",
       "notes": "Large cap equity fund scheme page",
-      "last_scraped": "2026-04-25T05:33:33.868337+00:00",
+      "last_scraped": "2026-04-26T05:59:42.540381+00:00",
       "scrape_status": "ok"
     },
     {
@@ -47,7 +47,7 @@
       "amc": "ICICI Prudential",
       "category": "scheme_specific",
       "notes": "Flexi cap equity fund scheme page",
-      "last_scraped": "2026-04-25T05:33:37.572477+00:00",
+      "last_scraped": "2026-04-26T05:59:46.118727+00:00",
       "scrape_status": "ok"
     },
     {
@@ -59,7 +59,7 @@
       "scheme_name": "general",
       "category": "regulatory",
       "notes": "SEBI mutual fund FAQs - regulatory information",
-      "last_scraped": "2026-04-25T05:33:42.249912+00:00",
+      "last_scraped": "2026-04-26T05:59:49.760384+00:00",
       "scrape_status": "ok"
     }
   ]
